@@ -1,18 +1,22 @@
 $boxRadius: 8px;
 $subtitle-color: #b3b2b2;
+$accentColor: rgba(219, 144, 249, 1);
 
 body, html {
     // height: 100%;
 }
 
+@media(min-width: 768px) { .hero {padding-top: 10rem;} }
+@media(max-width: 767px) { .hero {padding-top: 3rem;} }
+
 .hero {
   // padding: 10rem 5%;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  // padding-top: 10rem;
+  // padding-bottom: 10rem;
   position: relative;
   background: rgba(0, 0, 0, 0.5); /* If our image is bright, we can tone it down with this darker overlay */
   text-align: center;
-  height: 80vh;
+  height: 100vh;
 
   h2 {
     font-family: monospace;
@@ -26,6 +30,7 @@ body, html {
     margin-right: auto;
     font-size: 1.2rem;
     color: $subtitle-color;
+    margin-bottom: 3rem;
   }
 
   @media(min-width: 768px) { p {width: 52%;} }
@@ -63,6 +68,10 @@ body, html {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+
+  h3 {
+    text-align: center;
+  }
 }
 
 #aboutBlock:after {
@@ -71,13 +80,18 @@ body, html {
   position: absolute;
   background-image: url(media/bonnell.jpg);
   background-size: cover;
-  background-position: center;;
+  background-position: center;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
+}
 
+@media only screen and (max-device-width: 767px) {
+    .stick {
+        background-attachment: scroll;
+    }
 }
 
 .stick {
@@ -85,10 +99,21 @@ body, html {
   background-repeat: no-repeat;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .img-circle {
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px
+}
+
+.avatar-md {
+  @extend .img-circle;
+  margin-bottom: 1.0rem;
+  width: 150px;
+  height: 150px;
 }
 
 .nav-cell {
@@ -111,7 +136,7 @@ body, html {
 }
 
 .nav-cell:hover {
-  background-color: rgba(219, 144, 249, 1);
+  background-color: $accentColor;
 }
 
 footer {
@@ -153,7 +178,19 @@ footer {
 
 }
 
+.shadow-btn {
+  background-color: #222222;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 3rem;
+  color: white;
+  border-color: $accentColor;
+  cursor: pointer;
+}
 
+.shadow-btn:hover {
+  background-color: $accentColor;
+}
 
 
 
