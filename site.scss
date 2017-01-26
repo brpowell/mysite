@@ -50,12 +50,18 @@ body, html {
 
 #aboutBlock {
   background: rgba(0, 0, 0, 0.5); /* If our image is bright, we can tone it down with this darker overlay */
-  height: 60vh;
+  height: auto;
   position: relative;
+  color: white;
 
   .col-sm.6 {
     color: white;
     text-align: center;
+  }
+
+  .row {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
