@@ -1,9 +1,10 @@
 $boxRadius: 8px;
 $subtitle-color: #b3b2b2;
 $accentColor: rgba(219, 144, 249, 1);
+$darkGrey: #222222;
 
 body, html {
-    // height: 100%;
+    height: 100%;
 }
 
 @media(min-width: 768px) { .hero {padding-top: 10rem;} }
@@ -12,15 +13,15 @@ body, html {
 .hero {
   // padding: 10rem 5%;
   // padding-top: 10rem;
-  // padding-bottom: 10rem;
+  padding-bottom: 10rem;
   position: relative;
   background: rgba(0, 0, 0, 0.5); /* If our image is bright, we can tone it down with this darker overlay */
   text-align: center;
-  height: 100vh;
+  // height: 100vh;
 
-  h2 {
-    font-family: monospace;
-    font-size: 3rem;
+  h1 {
+    font-family: inherit;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: white
   }
@@ -153,7 +154,7 @@ footer {
 
 #featureBlock {
   height: auto;
-  background-color: #222222;
+  background-color: $darkGrey;
 
   h1 {
     text-align: center;
@@ -175,7 +176,35 @@ footer {
       padding-bottom: 1rem;
     }
   }
+}
 
+#projectsBlock {
+  background-color: rgb(194, 194, 194);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.project-button {
+  width: auto;
+  height: 6rem;
+  background-color: $darkGrey;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  padding-top: 1rem;
+
+  h3 {
+    color: whitesmoke;
+  }
+
+  h6 {
+    color: rgb(185, 185, 185);
+  }
+}
+
+.project-presentation {
+  width: auto;
+  height: 100%;
+  background-color: green;
 }
 
 .shadow-btn {
@@ -192,10 +221,8 @@ footer {
   background-color: $accentColor;
 }
 
-
-
 #homeAvatar {
   margin-bottom: 1.0rem;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
