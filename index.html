@@ -19,7 +19,7 @@
       </p>
       <div class="row">
         <div class="col-sm-12">
-          <button type="button" href="#featureBlock" class="btn shadow-btn">Check it out</button>
+          <a href="#projectsBlock"><button type="button" href="#featureBlock" class="btn shadow-btn">Check it out</button></a>
         </div>
       </div>
     </section>
@@ -30,17 +30,30 @@
         <div class="row">
           <div class="col-sm-8">
             <div class="project-presentation">
-
+              <img src="media/projects/0.png" />
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="project-button">
-              <h3>Pocket Pandora Radio</h3>
-              <h6>Internet connected touchscreen radio</h6>
+            <div class="project-button selected">
+                <h3>Pocket Pandora Radio</h3>
+                <h6>An Internet connected touchscreen radio.</h6>
+              <div class="project-cover"></div>
             </div>
-            <div class="project-button"></div>
-            <div class="project-button"></div>
-            <div class="project-button"></div>
+            <div class="project-button">
+              <h3>Kindred</h3>
+              <h6>An app for social networking with family.</h6>
+              <div class="project-cover"></div>
+            </div>
+            <div class="project-button">
+              <h3>Pipuccino</h3>
+              <h6>Weather, stocks, headlines, on a little lcd.</h6>
+              <div class="project-cover"></div>
+            </div>
+            <div class="project-button">
+              <h3>Kinda Golf VR</h3>
+              <h6>Golf with a different objective.</h6>
+              <div class="project-cover"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -103,26 +116,58 @@
 
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
     <!-- Smooth scrolling -->
     <script>
-    $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
+      $(document).ready(function(){
+
+        var speed = 5;
+        var index = 0;
+        var buttons = $('.project-button')
+        window.setInterval(function(){
+          $(buttons[index]).removeClass('selected', 400, 'swing');
+          index = index < 3 ? index + 1 : 0
+          $(buttons[index]).addClass('selected', 400, 'swing');
+        }, speed*1000);
+
+        $('.project-button').click(function(){
+          $('.selected').removeClass('selected', 400, 'swing');
+
+          $(this).addClass('selected', 400, 'swing');
+          index = $(this).index(buttons)
+        })
+
+              // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+
+
     </script>
   </body>
 
