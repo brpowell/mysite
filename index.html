@@ -26,7 +26,7 @@
 
     <section id="projectsBlock">
       <div class="container">
-        <h1>Projects</h1>
+        <h1>RECENT PROJECTS <hr class="accent-line"></h1>
         <div class="row">
           <div class="col-sm-8">
             <div class="project-presentation">
@@ -56,6 +56,11 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <a href="#"><button class="btn shadow-btn">View More</button></a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -82,7 +87,7 @@
 
     <section id="featureBlock">
       <div class="container">
-        <h1>My Favorite Recent Stuff</h1>
+        <h1>Some Favorites <hr class="accent-line" /></h1>
         <div class="row align-items-center">
           <div class="col-sm-4">
             <!-- <div class="nav-cell">Bio <i class="fa fa-address-card" aria-hidden="true"></i></div> -->
@@ -113,7 +118,9 @@
 
 
     <footer>
-
+      <div style="text-align:center;padding-top:16px;">
+        <h6>© 2017 Bryan Powell</h6>
+      </div>
     </footer>
 
     <script
@@ -123,52 +130,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-    <!-- Smooth scrolling -->
-    <script>
-      $(document).ready(function(){
+    <script src="site.js"></script>
 
-        var speed = 5;
-        var index = 0;
-        var buttons = $('.project-button')
-        window.setInterval(function(){
-          $(buttons[index]).removeClass('selected', 400, 'swing');
-          index = index < 3 ? index + 1 : 0
-          $(buttons[index]).addClass('selected', 400, 'swing');
-        }, speed*1000);
-
-        $('.project-button').click(function(){
-          $('.selected').removeClass('selected', 400, 'swing');
-
-          $(this).addClass('selected', 400, 'swing');
-          index = $(this).index(buttons)
-        })
-
-              // Add smooth scrolling to all links
-        $("a").on('click', function(event) {
-
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 800, function(){
-
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
-            });
-          } // End if
-        });
-      })
-
-
-    </script>
   </body>
 
 

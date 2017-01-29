@@ -190,21 +190,35 @@ footer {
 }
 
 #projectsBlock {
-  background-color: #dcdcdc;
+  background-color: #3e3e3e;
   padding-top: 3rem;
   padding-bottom: 3rem;
 
   .row {
     margin-bottom: 3rem;
+
+    .col-sm-12 {
+      text-align: center;
+    }
   }
 
   h1 {
-    color: $darkGrey;
+    color: white;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 3rem;
   }
+
+  img {
+    border-radius: $boxRadius;
+  }
+}
+
+.accent-line {
+  width: 5%;
+  border-width: 3px;
+  border-color: $accentColor;
 }
 
 .project-button {
@@ -263,9 +277,9 @@ footer {
 }
 
 .project-presentation {
-  width: auto;
+  width: 98%;
   height: 100%;
-  background-color: green;
+  background-color: rgba(254, 254, 254, 0.0);
   min-height: 14rem;
 
   img {
@@ -274,6 +288,11 @@ footer {
     height: 100%;
     object-fit: cover;
   }
+
+  .project0 { background-image: url(media/projects/0.png) }
+  .project1 { background-image: url(media/projects/0.png) }
+  .project2 { background-image: url(media/projects/0.png) }
+  .project3 { background-image: url(media/projects/0.png) }
 }
 
 
@@ -283,6 +302,7 @@ footer {
   width: 12rem;
   height: 3rem;
   border-radius: 3rem;
+  font-weight: bold;
   color: white;
   cursor: pointer;
 
