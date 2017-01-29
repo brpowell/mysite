@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $('.project-presentation > img').css('display', 'block')
+
   var index = 0;
   var buttons = $('.project-button')
   var timer = setInterval(function(){ setProject(); }, 5000)
