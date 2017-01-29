@@ -1,9 +1,10 @@
 $(document).ready(function(){
 
-  $('.project-presentation > img').css('display', 'block')
+  // $('.project-presentation > img').css('display', 'block')
 
   var index = 0;
   var buttons = $('.project-button')
+  var images = $('.project-presentation > img')
   var timer = setInterval(function(){ setProject(); }, 5000)
 
   $('.project-button').click(function(){
@@ -34,12 +35,19 @@ $(document).ready(function(){
     nextImage()
   }
 
+  // has new index already
   function nextImage() {
-    $('.project-presentation > img').fadeOut(200, function() {
-      $('.project-presentation > img').attr('src', "media/projects/" + index + ".png")
-    })
-
-    $('.project-presentation > img').fadeIn(200)
+    var curr = $(images[index])
+    $('.active').removeClass('active')
+    curr.addClass("active")
+    // prev.fadeOut(250, function(){
+    //
+    // })
+    // $('.project-presentation > img').fadeOut(200, function() {
+    //   $('.project-presentation > img').attr('src', "media/projects/" + index + ".png")
+    // })
+    //
+    // $('.project-presentation > img').fadeIn(200)
   }
 
 })
