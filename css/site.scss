@@ -1,0 +1,337 @@
+$boxRadius: 8px;
+$subtitle-color: #b3b2b2;
+// $accentColor: rgba(219, 144, 249, 1);
+// $accentColor: yellowgreen;
+// $accentColor: rgb(6, 213, 213);
+$accentColor: rgba(54, 83, 204, 0.85);
+$darkGrey: #222222;
+$transitionSpeed: 0.3s;
+
+@mixin transition($property, $speed, $type) {
+  -webkit-transition: $property $speed $type;
+  -moz-transition: $property $speed $type;
+  // -o-transition: $property $speed $type;
+  transition: $property $speed $type;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+@media(min-width: 768px) { .hero {padding-top: 10rem;} }
+@media(max-width: 767px) { .hero {padding-top: 3rem;} }
+
+.hero {
+  // padding: 10rem 5%;
+  // padding-top: 10rem;
+  // padding-bottom: 10rem;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5); /* If our image is bright, we can tone it down with this darker overlay */
+  text-align: center;
+  height: 100vh;
+
+  h1 {
+    font-family: inherit;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white
+  }
+
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    color: $subtitle-color;
+    margin-bottom: 3rem;
+  }
+
+  @media(min-width: 768px) { p {width: 52%;} }
+  @media(min-width: 568px) and (max-width: 777px) { p {width: 96%;} }
+
+}
+
+.hero:after {
+  @extend .stick;
+  content: "";
+  position: absolute;
+  background-image: url(../media/background.jpg);
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  // opacity: 0.2;
+}
+
+.section-heading {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+#aboutBlock {
+  background: rgba(0, 0, 0, 0.5); /* If our image is bright, we can tone it down with this darker overlay */
+  height: auto;
+  position: relative;
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .col-sm.6 {
+    color: white;
+    text-align: center;
+  }
+
+  .row {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  h3 {
+    text-align: center;
+  }
+}
+
+#aboutBlock:after {
+  @extend .stick;
+  content: "";
+  position: absolute;
+  background-image: url(../media/ptown.jpg);
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media only screen and (max-device-width: 767px) {
+    .stick {
+        background-attachment: scroll;
+    }
+}
+
+.stick {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-circle {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px
+}
+
+.avatar-md {
+  @extend .img-circle;
+  margin-bottom: 1.0rem;
+  width: 150px;
+  height: 150px;
+}
+
+.nav-cell {
+  background-color: rgba(134, 134, 134, 0.21);
+  width: 100%;
+  height: 60px;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 2rem;
+  transition: background-color 0.5s ease;
+  border-radius: 6px;
+  padding-left: 12px;
+  cursor: pointer;
+
+  i {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
+
+.nav-cell:hover {
+  background-color: $accentColor;
+}
+
+footer {
+  color:white;
+  height: 3rem;
+  background-color: $accentColor;
+}
+
+#favoritesBlock {
+  height: auto;
+  background-color: $darkGrey;
+
+  // h1 {
+  //   text-align: center;
+  //   color: white;
+  //   font-size: 2.5rem;
+  //   margin-bottom: 2rem;
+  // }
+
+  @media(min-width: 768px) {
+    .container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  @media(min-width: 568px) and (max-width: 777px) {
+    .container {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+#projectsBlock {
+  background-color: #3e3e3e;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .row {
+    margin-bottom: 3rem;
+
+    .col-sm-12 {
+      text-align: center;
+    }
+  }
+
+  // h1 {
+  //   color: white;
+  //   text-align: center;
+  //   font-size: 3rem;
+  //   font-weight: bold;
+  //   margin-bottom: 3rem;
+  // }
+
+  img {
+    border-radius: $boxRadius;
+  }
+}
+
+.accent-line {
+  width: 5%;
+  border-width: 3px;
+  border-color: $accentColor;
+}
+
+.active {
+  opacity: 1.0 !important;
+}
+
+.project-button {
+  width: auto;
+  height: 6rem;
+  background-color: $darkGrey;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  padding-top: 1rem;
+  border-radius: 8px;
+  border: 2px solid $darkGrey;
+  cursor: pointer;
+
+  content: "";
+  width: auto;
+  height: 6rem;
+  background-color: $darkGrey;
+
+  display:block;
+  position:relative;
+
+  @include transition(all, $transitionSpeed, ease);
+  // transition: border-color 0.5 ease;
+
+  h3 {
+    color: whitesmoke;
+  }
+
+  h6 {
+    color: rgb(185, 185, 185);
+  }
+}
+
+.overlay {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.67);
+  height: 20%;
+  width: 97%;
+  position: absolute;
+  padding: 1rem;
+  margin-top: 333px;
+  border-bottom-left-radius: $boxRadius;
+  border-bottom-right-radius: $boxRadius;
+}
+
+.project-cover {
+    background: $accentColor;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 0;
+    // transition: opacity $transitionSpeed;
+    @include transition(all, $transitionSpeed, ease);
+    border-radius: 8px;
+}
+
+.selected {
+  .project-cover {
+    opacity: 0.2;
+  }
+}
+
+.project-button.selected {
+  border-color: $accentColor;
+}
+
+.project-presentation {
+  width: 98%;
+  height: 100%;
+  background-color: rgba(254, 254, 254, 0.0);
+  min-height: 14rem;
+
+  img {
+    position: absolute;
+    width: 97%; /* or any custom size */
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.0;
+
+    @include transition(opacity, $transitionSpeed, ease);
+  }
+
+}
+
+.shadow-btn {
+  background-color: #222222;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 3rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+
+  @include transition(background-color, $transitionSpeed, ease);
+}
+
+.shadow-btn:hover {
+  background-color: $accentColor;
+}
+
+#homeAvatar {
+  margin-bottom: 1.0rem;
+  width: 200px;
+  height: 200px;
+}
