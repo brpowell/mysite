@@ -1,9 +1,9 @@
 $boxRadius: 8px;
 $subtitle-color: #b3b2b2;
 // $accentColor: rgba(219, 144, 249, 1);
-// $accentColor: yellowgreen;
+$accentColor: rgb(55, 175, 132);
 // $accentColor: rgb(6, 213, 213);
-$accentColor: rgba(54, 83, 204, 0.85);
+// $accentColor: rgba(54, 83, 204, 0.85);
 $darkGrey: #222222;
 $transitionSpeed: 0.3s;
 
@@ -48,6 +48,13 @@ html, body {
   @media(min-width: 768px) { p {width: 52%;} }
   @media(min-width: 568px) and (max-width: 777px) { p {width: 96%;} }
 
+}
+
+#heroButton {
+  // -webkit-animation-iteration-count: infinite;
+  // -webkit-animation-delay: 5s;
+  // -moz-animation-delay: 5s;
+  // animation-delay: 5s;
 }
 
 .hero:after {
@@ -192,6 +199,11 @@ footer {
     }
   }
 }
+@media(max-width: 991px) {
+  .overlay {
+    display: none;
+  }
+}
 
 #projectsBlock {
   background-color: #3e3e3e;
@@ -200,19 +212,15 @@ footer {
 
   .row {
     margin-bottom: 3rem;
-
     .col-sm-12 {
       text-align: center;
     }
-  }
+    .col-lg-8 {
+      margin-bottom: 1.5rem;
 
-  // h1 {
-  //   color: white;
-  //   text-align: center;
-  //   font-size: 3rem;
-  //   font-weight: bold;
-  //   margin-bottom: 3rem;
-  // }
+      // margin-right: 1rem;
+    }
+  }
 
   img {
     border-radius: $boxRadius;
@@ -300,7 +308,7 @@ footer {
   width: 98%;
   height: 100%;
   background-color: rgba(254, 254, 254, 0.0);
-  min-height: 14rem;
+  min-height: 18rem;
 
   img {
     position: absolute;
