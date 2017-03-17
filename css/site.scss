@@ -57,6 +57,10 @@ html, body {
   // animation-delay: 5s;
 }
 
+.modal-open {
+    padding-right: 0 !important;
+}
+
 .hero:after {
   @extend .stick;
   content: "";
@@ -162,7 +166,9 @@ html, body {
   margin-bottom: 1rem;
   color: white;
   font-size: 2rem;
-  transition: background-color 0.5s ease;
+  // transition: background-color 0.5s ease;
+  @include transition(background-color, 0.5s, ease);
+
   border-radius: 6px;
   padding-left: 12px;
   cursor: pointer;
@@ -352,4 +358,22 @@ footer {
   margin-bottom: 1.0rem;
   width: 200px;
   height: 200px;
+}
+
+.modal-title {
+    margin-bottom: 0.5rem;
+}
+
+.modal-button {
+    width: 100%;
+    background-color: #373737;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+
+    @include transition(background-color, 0.5s, ease);
+}
+
+.modal-button:hover {
+    background-color: $accentColor
 }

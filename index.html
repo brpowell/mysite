@@ -108,16 +108,16 @@
         <h1 class="section-heading wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Stuff I Like <hr class="accent-line" /></h1>
         <div class="row align-items-center">
           <div class="col-md-4">
-            <div class="nav-cell">Photos <i class="fa fa-camera-retro" aria-hidden="true"></i></div>
-            <div class="nav-cell">Books <i class="fa fa-book" aria-hidden="true"></i></div>
+            <div class="nav-cell" data-toggle="modal" data-target="#stuffModal">Photos <i class="fa fa-camera-retro" aria-hidden="true"></i></div>
+            <div class="nav-cell" data-toggle="modal" data-target="#stuffModal">Books <i class="fa fa-book" aria-hidden="true"></i></div>
           </div>
           <div class="col-md-4">
-            <div class="nav-cell">Games <i class="fa fa-gamepad" aria-hidden="true"></i></div>
-            <div class="nav-cell">Movies <i class="fa fa-film" aria-hidden="true"></i></div>
+            <div class="nav-cell" data-toggle="modal" data-target="#stuffModal">Games <i class="fa fa-gamepad" aria-hidden="true"></i></div>
+            <div class="nav-cell" data-toggle="modal" data-target="#stuffModal">Movies <i class="fa fa-film" aria-hidden="true"></i></div>
           </div>
           <div class="col-md-4">
-            <div class="nav-cell">Music <i class="fa fa-music" aria-hidden="true"></i></div>
-            <div class="nav-cell">TV <i class="fa fa-television" aria-hidden="true"></i></div>
+            <div class="nav-cell" data-toggle="modal" data-target="#stuffModal">Music <i class="fa fa-music" aria-hidden="true"></i></div>
+            <div class="nav-cell" data-toggle="modal" data-target="#stuffModal">TV <i class="fa fa-television" aria-hidden="true"></i></div>
           </div>
         </div>
       </div>
@@ -132,11 +132,28 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <!-- <script>AOS.init();</script> -->
     <script>new WOW().init();</script>
+
     <script src="js/site.js"></script>
   </body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="stuffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+            <h1 class="modal-title text-center" id="exampleModalLabel">Thanks for your interest!</h5>
+            <p>
+                There's nothing here at the moment, but that doesn't mean I don't like anything. The next part of this
+                website project will involve me creating a mini CMS so I can easily add new games, movies, etc to the site
+                without any real development. Come back soon!
+            </p>
+            <button type="button" class="btn modal-button" data-dismiss="modal">I'll Come Back Later</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </html>
