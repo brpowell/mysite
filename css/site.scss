@@ -93,23 +93,33 @@ html, body {
     text-align: center;
   }
 
-  .row {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
+  // .row {
+  //   padding-top: 3rem;
+  //   padding-bottom: 3rem;
+  // }
 
   h3 {
     text-align: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  img {
+      max-width: 75%;
+      height: auto;
+      border-radius: 5%;
+      border: 0.4rem solid $accentColor;
   }
 }
 
 #aboutBlock:after {
-  @extend .stick;
-  content: "";
-  position: absolute;
-  background-image: url(../media/ptown.jpg);
-  background-size: cover;
-  background-position: center;
+  // @extend .stick;
+  // content: "";
+  // position: absolute;
+  // background-image: url(../media/ptown.jpg);
+  // background-size: cover;
+  // background-position: center;
   top: 0;
   left: 0;
   right: 0;
@@ -275,7 +285,7 @@ footer {
   width: 97%;
   position: absolute;
   padding: 1rem;
-  margin-top: 333px;
+  margin-top: 314px;
   border-bottom-left-radius: $boxRadius;
   border-bottom-right-radius: $boxRadius;
 }
