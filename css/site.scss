@@ -18,7 +18,7 @@ html, body {
   overflow-x: hidden;
 }
 
-@media(min-width: 768px) { .hero {padding-top: 10rem;} }
+@media(min-width: 768px) { .hero {padding-top: 7rem;} }
 @media(max-width: 767px) { .hero {padding-top: 3rem;} }
 
 .hero {
@@ -97,11 +97,6 @@ html, body {
     text-align: center;
   }
 
-  // .row {
-  //   padding-top: 3rem;
-  //   padding-bottom: 3rem;
-  // }
-
   h3 {
     text-align: center;
     font-size: 2.4rem;
@@ -114,6 +109,7 @@ html, body {
       height: auto;
       border-radius: 5%;
       border: 0.4rem solid $accentColor;
+      margin-bottom: 2rem;
   }
 }
 
@@ -376,4 +372,11 @@ footer {
 
 .modal-button:hover {
     background-color: $accentColor
+}
+
+@media (max-width: 767px) {
+    #favoritesBlock {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
