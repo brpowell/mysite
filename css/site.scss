@@ -25,36 +25,44 @@ html, body {
   // padding: 10rem 5%;
   // padding-top: 10rem;
   // padding-bottom: 10rem;
-  position: relative;
+  // position: absolute;
   background: rgba(0, 0, 0, 0.5); /* If our image is bright, we can tone it down with this darker overlay */
   text-align: center;
   height: 100vh;
 
-  h1 {
-    font-family: inherit;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: white
-  }
 
-  p {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.2rem;
-    color: $subtitle-color;
-    margin-bottom: 3rem;
-  }
-
-  @media(min-width: 768px) { p {width: 52%;} }
-  @media(min-width: 568px) and (max-width: 777px) { p {width: 96%;} }
 
 }
 
-#heroButton {
-  // -webkit-animation-iteration-count: infinite;
-  // -webkit-animation-delay: 5s;
-  // -moz-animation-delay: 5s;
-  // animation-delay: 5s;
+.header {
+    position:absolute;
+    top:50%;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3rem;
+    // font-size: 46px;
+    -ms-transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+
+    h1 {
+      font-family: inherit;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: white
+    }
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.2rem;
+      color: $subtitle-color;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media(min-width: 768px) { p {width: 52%;} }
+    @media(min-width: 568px) and (max-width: 777px) { p {width: 96%;} }
 }
 
 .modal-open {
