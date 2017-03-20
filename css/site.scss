@@ -1,6 +1,5 @@
 $boxRadius: 8px;
 $subtitle-color: #b3b2b2;
-// $accentColor: rgba(219, 144, 249, 1);
 $accentColor: rgb(55, 175, 132);
 // $accentColor: rgb(6, 213, 213);
 // $accentColor: rgba(54, 83, 204, 0.85);
@@ -10,7 +9,6 @@ $transitionSpeed: 0.3s;
 @mixin transition($property, $speed, $type) {
   -webkit-transition: $property $speed $type;
   -moz-transition: $property $speed $type;
-  // -o-transition: $property $speed $type;
   transition: $property $speed $type;
 }
 
@@ -22,16 +20,9 @@ html, body {
 @media(max-width: 767px) { .hero {padding-top: 3rem;} }
 
 .hero {
-  // padding: 10rem 5%;
-  // padding-top: 10rem;
-  // padding-bottom: 10rem;
-  // position: absolute;
-  background: rgba(0, 0, 0, 0.5); /* If our image is bright, we can tone it down with this darker overlay */
+  background: rgba(0, 0, 0, 0.5);
   text-align: center;
   height: 100vh;
-
-
-
 }
 
 .header {
@@ -40,7 +31,6 @@ html, body {
     text-align: center;
     width: 100%;
     padding-bottom: 3rem;
-    // font-size: 46px;
     -ms-transform: translate(0,-50%);
     -webkit-transform: translate(0,-50%);
     transform: translate(0,-50%);
@@ -197,13 +187,6 @@ footer {
 #favoritesBlock {
   height: auto;
   background-color: $darkGrey;
-
-  // h1 {
-  //   text-align: center;
-  //   color: white;
-  //   font-size: 2.5rem;
-  //   margin-bottom: 2rem;
-  // }
 
   @media(min-width: 768px) {
     .container {
@@ -362,6 +345,7 @@ footer {
   margin-bottom: 1.0rem;
   width: 200px;
   height: 200px;
+  border: $accentColor 0.4rem solid;
 }
 
 .modal-title {
